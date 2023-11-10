@@ -12,7 +12,7 @@ Asegúrate de tener [Node.js](https://nodejs.org/) y [npm](https://www.npmjs.com
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/tuusuario/reactcoderhouse.git
+    git clone https://github.com/brunovalenzisi/react.git
     ```
 
 2. Navega al directorio del proyecto:
@@ -77,9 +77,9 @@ npm run build
 - SASS y Tailwind CSS (para estilos)
 - Slick Carousel (para sliders/carousels)
 
-### Contribuciones
 
-¡Contribuciones son bienvenidas! Antes de realizar cambios importantes, por favor abre un issue para discutir sobre las modificaciones propuestas.
+### Demo
+Puedes probar esta app en linea [con un simple click aqui](https://react-five-mu.vercel.app/) 
 
 
 **¡Gracias por utilizar ReactCoderHouse! Esperamos que disfrutes utilizando nuestra aplicación e-commerce.**
