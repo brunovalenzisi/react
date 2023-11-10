@@ -36,7 +36,7 @@ const CheckOut = () => {
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-3xl p-5 text-gray-700 font-bold">
         Total: $
-        {cart.reduce((total, item) => total + item.precio * item.cantidad, 0)}
+        {cart.reduce((total, item) => total + item.precio.replace(/\./g, "") * item.cantidad, 0).toFixed(2)}
       </h1>
 
       <div className="w-full max-w-xs  ">
