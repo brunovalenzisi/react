@@ -1,8 +1,85 @@
-# React + Vite
+# ReactCoderHouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ReactCoderHouse es una aplicación e-commerce desarrollada en React con Vite como herramienta de construcción. La aplicación ofrece un carrito de compras funcional, sistema de checkout y otras características esenciales para una experiencia de compra en línea.
+
+## Instalación
+
+Asegúrate de tener [Node.js](https://nodejs.org/) y [npm](https://www.npmjs.com/) instalados en tu sistema antes de continuar.
+
+1. Clona el repositorio:
+
+    ```bash
+    git clone https://github.com/tuusuario/reactcoderhouse.git
+    ```
+
+2. Navega al directorio del proyecto:
+
+    ```bash
+    cd reactcoderhouse
+    ```
+
+3. Instala las dependencias:
+
+
+    ```bash
+    npm install
+    
+
+## Uso
+
+### Desarrollo
+
+Inicia el servidor de desarrollo:
+
+```bash 
+npm run dev
+```
+    
+Visita http://localhost:3000 en tu navegador.
+
+  
+
+
+## Producción
+
+Genera la versión de producción:
+```bash
+npm run build
+```
+
+    
+
+### Scripts
+
+- `dev`: Inicia el servidor de desarrollo con Vite.
+- `build`: Construye la versión de producción.
+- `lint`: Ejecuta ESLint para linting del código.
+- `preview`: Inicia Vite en modo de vista previa.
+
+### Tecnologías Principales
+
+- React
+- Vite
+- Firebase (para la funcionalidad backend)
+- React Router Dom
+- Otros paquetes y herramientas esenciales
+
+### Dependencias Principales
+
+- Firebase
+- React y React DOM
+- React Router Dom
+- React Slick (para sliders/carousels)
+- React Toastify (para notificaciones)
+- SASS y Tailwind CSS (para estilos)
+- Slick Carousel (para sliders/carousels)
+
+### Contribuciones
+
+¡Contribuciones son bienvenidas! Antes de realizar cambios importantes, por favor abre un issue para discutir sobre las modificaciones propuestas.
+
+
+**¡Gracias por utilizar ReactCoderHouse! Esperamos que disfrutes utilizando nuestra aplicación e-commerce.**
