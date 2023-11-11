@@ -14,22 +14,27 @@ const CheckOut = () => {
   const [name, setName] = useState("");
 
   const handleSubmit = () => {
-    
     if (cart.length == 0) {
-      toast.warning("Tu carrito esta vacio",{hideProgressBar: true});
+      toast.warning("Tu carrito esta vacio", { hideProgressBar: true });
     } else if (email && phone && name) {
       const user = { email: email, telefono: phone, nombre: name };
-        toast.promise(enviarOrden(user, cart, clearCart), {
-        pending: "Por Favor espera mientras verificamos los datos",
-        success: "Operacion exitosa! Disfruta de tu compra👌",
-        error: "Hubo un error, no se pudo completar la compra🤯",
-        hideProgressBar: true,
-        autoClose: 5000
-      }).then(()=>{toast("Gracias por su compra! sera redirigido al inicio")
-                   setTimeout(()=>{window.location.href = "/"},3000)   
-    });
+      toast
+        .promise(enviarOrden(user, cart, clearCart), {
+          pending: "Por Favor espera mientras verificamos los datos",
+          success: "Operacion exitosa! Disfruta de tu compra👌",
+          error: "Hubo un error, no se pudo completar la compra🤯",
+          hideProgressBar: true,
+          autoClose: 5000,
+        })
+        .then(() => {
+          toast("Gracias por su compra! sera redirigido al inicio");
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 3000);
+        });
     } else {
-      toast.error("Debes completar todos los campos"),{hideProgressBar: true};
+      toast.error("Debes completar todos los campos"),
+        { hideProgressBar: true };
     }
   };
 

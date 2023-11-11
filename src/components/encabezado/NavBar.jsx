@@ -1,12 +1,10 @@
 import CartWidget from "./CartWidget";
 import { NavLink, useLocation } from "react-router-dom";
 
-
 const NavBar = () => {
-  const location = useLocation()
-  const endPoint=location.pathname
-  const showCart= endPoint!="/cart"&& endPoint!="/cart/checkout"
-  
+  const location = useLocation();
+  const endPoint = location.pathname;
+  const showCart = endPoint != "/cart" && endPoint != "/cart/checkout";
 
   return (
     <>
@@ -27,9 +25,7 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-        <div className="px-3">
-          {showCart && <CartWidget />}
-        </div>
+        <div className="px-3">{showCart && <CartWidget />}</div>
       </div>
     </>
   );

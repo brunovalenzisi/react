@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const ItemDetail = (props) => {
-  
   const {
     producto,
     categoria,
@@ -17,9 +16,9 @@ const ItemDetail = (props) => {
     precio,
     stock,
     descripcion,
-    id
+    id,
   } = props.data;
-  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -28,33 +27,19 @@ const ItemDetail = (props) => {
     slidesToScroll: 1,
   };
   const cartContext = useCartContext();
-  const {cart, addToCart } = cartContext;
-  const [onCart,setOnCart] = useState(false) 
-  
-  
+  const { cart, addToCart } = cartContext;
+  const [onCart, setOnCart] = useState(false);
 
-
-  function getDisponibles() { 
-  const producto = cart.find((item)=>item.id==id)
-  return producto ? stock-producto.cantidad : stock
-
-
+  function getDisponibles() {
+    const producto = cart.find((item) => item.id == id);
+    return producto ? stock - producto.cantidad : stock;
   }
-
-  
-
-
-  
 
   function onAdd(cant) {
-    const producto = { ...props.data};
-    addToCart(producto,cant);
-   setOnCart(true)
+    const producto = { ...props.data };
+    addToCart(producto, cant);
+    setOnCart(true);
   }
-
-
-
-
 
   return (
     <div className="max-w-4xl mx-auto p-4">
@@ -63,23 +48,32 @@ const ItemDetail = (props) => {
         <nav className="text-sm font-medium" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2">
             <li>
-              <Link to={"/category/"+genero} className="text-yellow-600 hover:underline">
+              <Link
+                to={"/category/" + genero}
+                className="text-yellow-600 hover:underline"
+              >
                 {genero}
               </Link>
-              
             </li>
             <li>/</li>
             <li>
-            <Link to={"/category/"+genero+"/"+categoria} className="text-yellow-600 hover:underline">
+              <Link
+                to={"/category/" + genero + "/" + categoria}
+                className="text-yellow-600 hover:underline"
+              >
                 {categoria}
               </Link>
             </li>
             <li>/</li>
             <li className="text-gray-500">
-            <Link to={"/category/"+genero+"/"+categoria+"/"+subCategoria}>
-              {subCategoria}
-            </Link>
-              </li>
+              <Link
+                to={
+                  "/category/" + genero + "/" + categoria + "/" + subCategoria
+                }
+              >
+                {subCategoria}
+              </Link>
+            </li>
           </ol>
         </nav>
       </div>
@@ -96,10 +90,12 @@ const ItemDetail = (props) => {
         <h6 className="text-sm">Disponibles:{getDisponibles()}</h6>
       </div>
       <div className="px-6 py-4"></div>
-      {!onCart && <ItemCount initial={1} stock={getDisponibles()} onAdd={onAdd} />}
+      {!onCart && (
+        <ItemCount initial={1} stock={getDisponibles()} onAdd={onAdd} />
+      )}
       <Link to="/cart">
-      <button className="btn">Ver carrito</button>
-        </Link>
+        <button className="btn">Ver carrito</button>
+      </Link>
     </div>
   );
 };

@@ -9,11 +9,10 @@ import {
   getDoc,
   addDoc,
 } from "firebase/firestore";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import "react-toastify/dist/ReactToastify.css";
 
 async function cargarProductos(params) {
-  console.log(params);
   const db = getFirestore(app);
   const productCollection = collection(db, "productos");
   const q = query(productCollection);
@@ -93,11 +92,9 @@ async function cargarProducto(params) {
   const productoEncontrado = await getDoc(documento);
 
   if (productoEncontrado.exists()) {
-    // Encuentra un producto con el ID especificado
     const producto = productoEncontrado.data();
     return { ...producto, id: productoEncontrado.id };
   } else {
-    // El producto no se encontró
     return null;
   }
 }
@@ -120,10 +117,9 @@ async function enviarOrden(user, cart, clearCart) {
   };
   const db = getFirestore();
   const ordersCollection = collection(db, "orders");
-  await addDoc(ordersCollection, order)
-    .then(() => {
-      clearCart();
-    })
+  await addDoc(ordersCollection, order).then(() => {
+    clearCart();
+  });
 }
 
 export { cargarProductos, cargarProducto, enviarOrden };
