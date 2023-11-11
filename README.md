@@ -89,6 +89,9 @@ Una vez finalizada la compra, se envia la informacion de la transaccion a una co
 
 ### Demo
 Puedes probar esta app en linea [con un simple click aqui](https://react-five-mu.vercel.app/) 
+
+
+
 ![Clip que demuestra la funcionalidad del firestore](public/demo.gif)
 
 
