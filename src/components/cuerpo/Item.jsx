@@ -12,7 +12,7 @@ const Item = (props) => {
             alt={producto}
           />
           <h1 className="text-gray-700 font-bold text-xl ">
-            {precio}
+            ${precio}
           </h1>
           <h2 className="card__title">{producto}</h2>
           

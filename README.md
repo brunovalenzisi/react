@@ -77,6 +77,15 @@ npm run build
 - SASS y Tailwind CSS (para estilos)
 - Slick Carousel (para sliders/carousels)
 
+### Consideraciones
+
+Esta aplicacion trae la informacion del stock de los productos desde la base de datos y
+simula un control de stock desde el front-end, descontando la cantidad añadida al carrito del stock total.
+Sin embargo, a fines practicos y netamente del desarrollo, no descuenta el stock de la base de datos una vez simulada la compra,
+para evitar inconvenientes por falta de stock en la demo de la aplicacion.
+Una vez finalizada la compra, se envia la informacion de la transaccion a una coleccion en la base de datos.
+
+
 
 ### Demo
 Puedes probar esta app en linea [con un simple click aqui](https://react-five-mu.vercel.app/) 

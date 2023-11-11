@@ -3,6 +3,7 @@ import { enviarOrden } from "../../utils";
 import { useCartContext } from "../../CartProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Brief from "./Brief";
 
 const CheckOut = () => {
   const cartContext = useCartContext();
@@ -34,10 +35,7 @@ const CheckOut = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl p-5 text-gray-700 font-bold">
-        Total: $
-        {cart.reduce((total, item) => total + item.precio.replace(/\./g, "") * item.cantidad, 0).toFixed(2)}
-      </h1>
+      <Brief cart={cart} />
 
       <div className="w-full max-w-xs  ">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
