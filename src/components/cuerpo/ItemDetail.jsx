@@ -1,3 +1,4 @@
+import React from "react";
 import Slider from "react-slick";
 import ItemCount from "./ItemCount";
 import "slick-carousel/slick/slick.css";

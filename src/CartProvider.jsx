@@ -34,7 +34,7 @@ export function CartProvider({ children }) {
     carrito.pop(productoNuevo);
     setCart(carrito);
   };
-  const clearCart = (producto) => {
+  const clearCart = () => {
     setCart([]);
   };
   return (

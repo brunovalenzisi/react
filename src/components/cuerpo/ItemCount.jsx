@@ -1,10 +1,10 @@
+import React from "react";
 import { useState } from "react";
 
 const ItemCount = (props) => {
   const stock = props.stock;
   const initial = props.initial;
   const onAdd = props.onAdd;
-  const encargados = props.encargados;
 
   const [count, setCount] = useState(stock > 0 ? initial : 0);
   const handleCount = (e) => {

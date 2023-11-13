@@ -1,3 +1,4 @@
+import React from "react";
 import CartWidget from "./CartWidget";
 import { NavLink, useLocation } from "react-router-dom";
 

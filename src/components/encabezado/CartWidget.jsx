@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../CartProvider";
 import { useEffect, useState } from "react";
